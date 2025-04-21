@@ -90,7 +90,7 @@ func benchmarkWhere(b *testing.B, size int, prealloc bool) {
 	b.ResetTimer()
 
 	// RUN.
-	for i := 0; i < b.N; i++ {
+	for b.Loop() {
 		// ACT.
 		data.Where(func(n int) bool {
 			return n%2 == 0
