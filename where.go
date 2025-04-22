@@ -26,7 +26,7 @@
 // Package generic provides a set of "generic" functions.
 package generic
 
-// Where returns a new slice containing all elements in data that satisfy the given predicate.
+// Where returns a new slice containing all elements in data that satisfy predicate.
 //
 // If prealloc is true, the result slice is preallocated with the full capacity of data, which avoids additional
 // allocations during filtering. This may use more memory than necessary if few elements match.
