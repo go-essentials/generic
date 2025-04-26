@@ -26,13 +26,9 @@
 // Package generic provides a set of "generic" functions.
 package generic
 
-// Where returns a new slice containing all elements in data that satisfy predicate.
-//
-// If prealloc is true, the result slice is preallocated with the full capacity of data, which avoids additional
-// allocations during filtering. This may use more memory than necessary if few elements match.
-//
-// If prealloc is false, the result slice starts with zero capacity and grows as needed, using only as much memory as
-// required to store the matching elements.
+// Where filters the elements of data for which predicate returns true.
+// If prealloc is true, the result slice is preallocated to the full capacity of data, which may use more memory than
+// needed. Otherwise, the result slice grows dynamically as required.
 func (data Slice[T]) Where(predicate func(T) bool, prealloc bool) Slice[T] {
 	var matches Slice[T]
 
