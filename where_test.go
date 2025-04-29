@@ -91,7 +91,6 @@ func benchmarkWhere(b *testing.B, size int, prealloc bool) {
 
 	// RUN.
 	for b.Loop() {
-		// ACT.
 		data.Where(func(n int) bool {
 			return n%2 == 0
 		}, prealloc)
