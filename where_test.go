@@ -78,7 +78,7 @@ func benchmarkWhere(b *testing.B, size int, prealloc bool) {
 	populateData := func(amount int) generic.Slice[int] {
 		data := make(generic.Slice[int], amount)
 
-		for idx := range size {
+		for idx := range amount {
 			data[idx] = idx
 		}
 
