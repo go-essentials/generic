@@ -48,7 +48,7 @@ func TestWhere(t *testing.T) {
 		}, true)
 
 		// ASSERT.
-		assert.EqualS(t, got, want, "", "\n\n"+
+		assert.EqualSf(t, got, want, "\n\n"+
 			"UT Name:  (Pre-allocate) - Return elements from a slice that matches a given predicate.\n"+
 			"\033[32mExpected: %v\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", want, got)
@@ -65,7 +65,7 @@ func TestWhere(t *testing.T) {
 		}, false)
 
 		// ASSERT.
-		assert.EqualS(t, got, want, "", "\n\n"+
+		assert.EqualSf(t, got, want, "\n\n"+
 			"UT Name:  (NO Pre-allocate) - Return elements from a slice that matches a given predicate.\n"+
 			"\033[32mExpected: %v\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", want, got)
